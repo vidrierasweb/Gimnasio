@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pulso Gym · Entrená con clase de prueba gratis</title>
+<meta name="description" content="Musculación, funcional, spinning, boxeo y más. Reservá tu clase de prueba gratis por WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F3FF;--ink:#13102B;--vio:#6A3DFF;--lime:#C6FF3D;--coral:#FF5C39;--d:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;--b:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;--ln:1px solid rgba(19,16,43,.1);--pop:0 18px 40px -18px rgba(19,16,43,.4),0 2px 6px rgba(19,16,43,.06)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#E4DFFF;font-family:var(--b);color:var(--ink);line-height:1.5;padding-top:env(safe-area-inset-top,0px)}
+.app{max-width:480px;margin:0 auto;background:var(--bg);min-height:100vh;padding-bottom:96px;overflow:hidden;box-shadow:0 40px 120px -30px rgba(19,16,43,.4)}
+h1,h2,h3{font-family:var(--d);font-weight:900;line-height:.95;letter-spacing:-.005em;text-transform:uppercase}
+h2{font-size:38px;margin-bottom:10px}
+p{max-width:60ch}a{color:inherit}
+:focus-visible{outline:3px solid var(--vio);outline-offset:3px}
+section{padding:42px 20px}
+.sub{color:#4A4670;margin-bottom:22px}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border:0;border-radius:16px;background:linear-gradient(180deg,#7B52FF,#5A2FEA);color:#fff;font:700 16px var(--b);text-decoration:none;cursor:pointer;box-shadow:0 10px 24px -8px rgba(106,61,255,.7),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .12s}
+.btn:active{transform:scale(.97)}
+.btn.lime{background:linear-gradient(180deg,#D8FF6B,#B9F22A);color:var(--ink);box-shadow:0 10px 24px -8px rgba(198,255,61,.55),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn.wa{background:linear-gradient(180deg,#1ED27F,#0E9F5C)}
+.btn.ghost{background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.hero .btn.lime::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.7) 50%,transparent 60%);transform:translateX(-120%);animation:sheen 4.5s 1.8s infinite}
+@keyframes sheen{to{transform:translateX(120%)}}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(19,16,43,.82);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);color:#fff}
+.logo{display:flex;align-items:center;gap:10px;font:900 24px var(--d);text-transform:uppercase;text-decoration:none}
+.logo i{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--lime);font-style:normal;font-size:19px}
+header .btn{min-height:40px;padding:0 16px;font-size:14px}
+#bar{position:absolute;left:0;right:0;bottom:0;height:3px;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--lime),var(--coral))}
+
+.hero{position:relative;color:#fff;background:radial-gradient(90% 55% at 100% 0,#8F6BFF,transparent 60%),linear-gradient(170deg,#4524E8,#1C0C73);border-radius:0 0 38px 38px;padding:38px 22px 0;overflow:hidden}
+.hero h1{font-size:clamp(54px,17vw,76px);margin-bottom:14px}
+.hero h1 span{color:var(--lime)}
+.hero p{font-size:18px;color:#E6E0FF;margin-bottom:24px}
+.ctas{display:flex;flex-direction:column;gap:12px}
+.hero>*{animation:in .9s cubic-bezier(.2,.7,.2,1) both}
+.hero>:nth-child(2){animation-delay:.12s}.hero>:nth-child(3){animation-delay:.24s}.hero>:nth-child(4){animation-delay:.36s}.hero>:nth-child(5){animation-delay:.5s}
+@keyframes in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.stats div{padding:12px 10px;border-radius:16px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.stats b{display:block;font:900 34px/1 var(--d);color:var(--lime)}
+.stats small{font-size:12px;font-weight:500;color:#D5CCFF}
+.scene{position:relative;height:210px;margin:18px -22px 0;translate:0 calc(var(--sy,0)*-.1px)}
+.bar{position:absolute;left:50%;top:44px;width:270px;margin-left:-135px;animation:lift 2.4s ease-in-out infinite;filter:drop-shadow(0 16px 14px rgba(0,0,0,.35))}
+.bar svg{display:block;width:100%}
+@keyframes lift{0%,100%{transform:translateY(62px)}45%,55%{transform:translateY(0)}}
+.floor{position:absolute;left:50%;bottom:22px;width:230px;height:16px;margin-left:-115px;border-radius:50%;background:rgba(0,0,0,.35);filter:blur(6px);animation:shd 2.4s ease-in-out infinite}
+@keyframes shd{0%,100%{transform:scale(1)}45%,55%{transform:scale(.7);opacity:.5}}
+.rep{position:absolute;z-index:3;right:22px;top:6px;padding:9px 14px;border-radius:14px;background:var(--lime);color:var(--ink);font:900 20px var(--d);animation:float 4s ease-in-out infinite}
+.rep b{display:inline-block;min-width:1.2em}
+@keyframes float{50%{transform:translateY(-8px)}}
+.bump{animation:bump .35s}@keyframes bump{40%{transform:scale(1.3)}}
+
+.marq{overflow:hidden;background:var(--lime);padding:12px 0;margin-top:-1px;transform:rotate(-1.5deg) scale(1.05);margin:26px 0 6px}
+.marq div{display:flex;width:max-content;animation:mq 20s linear infinite;font:900 26px var(--d);text-transform:uppercase;white-space:nowrap}
+.marq span{padding:0 14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.disc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 6px;border:var(--ln);border-radius:20px;background:#fff;box-shadow:var(--pop);font-weight:600;font-size:14px;text-align:center;transition:transform .25s}
+.dc:active{transform:scale(.94)}
+.dc span{font-size:32px;line-height:1}
+.dc:nth-child(1){background:#EDE7FF}.dc:nth-child(3){background:#F3FFD0}.dc:nth-child(5){background:#FFE6DF}
+
+.planes{display:grid;gap:16px}
+.plan{padding:22px;border:var(--ln);border-radius:24px;background:#fff;box-shadow:var(--pop);position:relative}
+.plan h3{font-size:28px}
+.plan .pr{font:900 44px/1 var(--d);margin:6px 0 2px}.plan .pr small{font:500 15px var(--b);color:#6B6790}
+.plan ul{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:6px;font-size:15px}
+.plan li::before{content:"✓";font-weight:700;color:var(--vio);margin-right:8px}
+.plan .btn{width:100%}
+.plan.top{background:linear-gradient(160deg,#5A2FEA,#2A12A8);color:#fff;border:0}
+.plan.top small,.plan.top li::before{color:var(--lime)}
+.plan.top .pr small{color:#D5CCFF}
+.badge{position:absolute;top:-12px;right:18px;background:var(--lime);color:var(--ink);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px}
+.nota{font-size:13px;color:#6B6790;margin-top:14px}
+
+.arma{background:radial-gradient(80% 50% at 90% 0,rgba(255,255,255,.18),transparent 60%),linear-gradient(180deg,#3C1FD6,#150A66);color:#fff}
+.arma .sub{color:#D5CCFF}
+.card{background:#fff;color:var(--ink);border-radius:24px;padding:20px 16px;box-shadow:0 30px 60px -24px rgba(5,0,50,.7)}
+.card h3{font-size:20px;margin:0 0 10px;letter-spacing:.01em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{min-height:44px;padding:0 16px;border:1.5px solid rgba(19,16,43,.15);border-radius:99px;background:var(--bg);font:600 15px var(--b);color:var(--ink);cursor:pointer;transition:all .2s}
+.chip.on{background:var(--ink);color:var(--lime);border-color:var(--ink)}
+.card .btn{width:100%}
+
+.hs{display:grid;gap:10px}
+.h{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:14px;border:var(--ln);border-radius:16px;background:#fff;box-shadow:var(--pop)}
+.h b{font:900 22px/1 var(--d)}.h span{font-size:15px;color:#4A4670}
+
+.voz{padding:20px;border:var(--ln);border-radius:20px;background:#fff;box-shadow:var(--pop);margin-bottom:16px}
+.voz:nth-of-type(even){background:#EDE7FF}
+.voz p{font-size:17px;font-weight:500}.voz small{display:block;margin-top:10px;font-weight:700}
+details{background:#fff;border:var(--ln);border-radius:16px;margin-bottom:10px;box-shadow:var(--pop)}
+summary{cursor:pointer;list-style:none;padding:16px 48px 16px 16px;font-weight:600;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font:900 26px var(--d);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{padding:0 16px 16px;color:#4A4670}
+.final{background:linear-gradient(160deg,#FF7A55,#E8381A);color:#fff;text-align:center}
+.final h2{font-size:46px}.final p{margin:0 auto 22px;font-weight:500}.final .btn{width:100%}
+.seller{background:#fff;text-align:center}.seller p{margin:0 auto 18px;color:#4A4670}.seller .btn{width:100%}
+footer{padding:26px 20px;background:var(--ink);color:#C9C4EE;font-size:14px}
+footer b{color:#fff;font:900 24px var(--d);text-transform:uppercase}footer p{margin-top:6px}
+.fab{position:fixed;right:max(16px,calc(50% - 224px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:8px;height:54px;padding:0 20px;border-radius:99px;background:linear-gradient(180deg,#1ED27F,#0E9F5C);color:#fff;font:700 16px var(--b);text-decoration:none;box-shadow:0 14px 30px -10px rgba(18,183,106,.85),inset 0 1px 0 rgba(255,255,255,.4)}
+.fab::before{content:"";position:absolute;inset:0;border-radius:99px;animation:ring 2.8s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(30,210,127,.55)}70%,100%{box-shadow:0 0 0 16px rgba(30,210,127,0)}}
+.js .rv{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.hero>*,.bar,.floor,.rep,.marq div,.fab::before,.btn::after{animation:none!important}.bar{transform:translateY(20px)}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <a class="logo" href="#"><i>🏋️</i><span data-nombre>Pulso Gym</span></a>
+  <a class="btn lime" data-wa="Hola! Quiero reservar mi clase de prueba gratis." href="#">Probar gratis</a>
+  <span id="bar"></span>
+</header>
+
+<main>
+<div class="hero">
+  <h1>Hoy toca<br><span>entrenar.</span></h1>
+  <p>Musculación, funcional, spinning y boxeo con profes que te acompañan. Tu primera clase es gratis.</p>
+  <div class="ctas">
+    <a class="btn lime" data-wa="Hola! Quiero reservar mi clase de prueba gratis." href="#">Reservar clase gratis</a>
+    <a class="btn ghost" href="#planes">Ver planes</a>
+  </div>
+  <div class="stats">
+    <div><b data-n="600" data-s="+">0</b><small>socios activos</small></div>
+    <div><b data-n="12">0</b><small>clases por día</small></div>
+    <div><b data-n="16">0</b><small>horas abiertos</small></div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="floor"></div>
+    <div class="bar" id="lift"><svg viewBox="0 0 280 110"><rect x="8" y="51" width="264" height="8" rx="4" fill="#D9D6F5"/><rect x="34" y="12" width="15" height="86" rx="6" fill="#C6FF3D"/><rect x="51" y="24" width="12" height="62" rx="5" fill="#fff"/><rect x="65" y="45" width="9" height="20" rx="3" fill="#8E88C9"/><rect x="206" y="45" width="9" height="20" rx="3" fill="#8E88C9"/><rect x="217" y="24" width="12" height="62" rx="5" fill="#fff"/><rect x="231" y="12" width="15" height="86" rx="6" fill="#C6FF3D"/></svg></div>
+    <div class="rep">Rep <b id="rep">1</b></div>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div><span>Musculación ✦</span><span>Funcional ✦</span><span>Spinning ✦</span><span>Boxeo ✦</span><span>Yoga ✦</span><span>Crossfit ✦</span><span>Musculación ✦</span><span>Funcional ✦</span><span>Spinning ✦</span><span>Boxeo ✦</span><span>Yoga ✦</span><span>Crossfit ✦</span></div></div>
+
+<section>
+  <h2>Elegí tu disciplina</h2>
+  <p class="sub">Todas incluidas en el plan Full. Probá una distinta cada semana.</p>
+  <div class="disc">
+    <div class="dc"><span>🏋️</span>Musculación</div><div class="dc"><span>🔥</span>Funcional</div><div class="dc"><span>🚴</span>Spinning</div>
+    <div class="dc"><span>🥊</span>Boxeo</div><div class="dc"><span>🧘</span>Yoga</div><div class="dc"><span>⚡</span>Crossfit</div>
+  </div>
+</section>
+
+<section id="planes" style="padding-top:8px">
+  <h2>Planes sin letra chica</h2>
+  <p class="sub">Sin matrícula y sin permanencia. Cancelás cuando quieras.</p>
+  <div class="planes">
+    <div class="plan"><h3>Básico</h3><div class="pr">$28.000<small> /mes</small></div><ul><li>3 días por semana</li><li>Sala de musculación</li><li>Plan de entrenamiento</li></ul><a class="btn" data-wa="Hola! Quiero info del plan Básico." href="#">Quiero este plan</a></div>
+    <div class="plan top"><span class="badge">Más elegido</span><h3>Full</h3><div class="pr">$38.000<small> /mes</small></div><ul><li>Acceso libre todos los días</li><li>Todas las clases grupales</li><li>Seguimiento con profe</li></ul><a class="btn lime" data-wa="Hola! Quiero info del plan Full." href="#">Quiero este plan</a></div>
+    <div class="plan"><h3>Trimestral</h3><div class="pr">$99.000<small> /3 meses</small></div><ul><li>Todo lo del plan Full</li><li>Un mes de regalo en promo</li><li>Congelás si viajás</li></ul><a class="btn" data-wa="Hola! Quiero info del plan Trimestral." href="#">Quiero este plan</a></div>
+  </div>
+  <p class="nota">Precios de ejemplo, a confirmar por WhatsApp.</p>
+</section>
+
+<section class="arma">
+  <h2>Armá tu clase de prueba</h2>
+  <p class="sub">Contanos qué buscás y te reservamos un turno.</p>
+  <div class="card">
+    <h3>Tu objetivo</h3>
+    <div class="chips" data-g="obj"><button type="button" class="chip on">Bajar de peso</button><button type="button" class="chip">Ganar músculo</button><button type="button" class="chip">Salud y movilidad</button></div>
+    <h3>Días por semana</h3>
+    <div class="chips" data-g="dias"><button type="button" class="chip">2</button><button type="button" class="chip on">3</button><button type="button" class="chip">4</button><button type="button" class="chip">5</button></div>
+    <a class="btn wa" id="reservar" href="#">Reservar por WhatsApp</a>
+  </div>
+</section>
+
+<section>
+  <h2>Horarios</h2>
+  <p class="sub">Abierto de lunes a sábado.</p>
+  <div class="hs">
+    <div class="h"><b>7 a 12 hs</b><span>Musculación libre y Funcional</span></div>
+    <div class="h"><b>14 a 18 hs</b><span>Spinning y Yoga</span></div>
+    <div class="h"><b>18 a 23 hs</b><span>Boxeo, Crossfit y sala libre</span></div>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <h2>Lo que dicen los socios</h2>
+  <p class="sub">Gente real, resultados reales.</p>
+  <div class="voz"><p>“Hacía años que no me sostenía un gimnasio. Acá los profes te conocen por el nombre y eso hace que vengas.”</p><small>Lucía · Socia hace 8 meses</small></div>
+  <div class="voz"><p>“Las clases de boxeo son lo mejor de mi semana. Bajé 9 kilos sin darme cuenta.”</p><small>Nicolás · Socio hace 1 año</small></div>
+</section>
+
+<section style="padding-top:8px">
+  <h2>Preguntas frecuentes</h2>
+  <p class="sub">Lo que más nos consultan.</p>
+  <details><summary>¿Puedo probar antes de inscribirme?</summary><p>Sí, tu primera clase es gratis. Reservás por WhatsApp y te esperamos.</p></details>
+  <details><summary>¿Hay que pagar matrícula?</summary><p>No cobramos matrícula ni exigimos permanencia mínima.</p></details>
+  <details><summary>¿Tienen vestuarios y duchas?</summary><p>Sí, con duchas de agua caliente y lockers para tus cosas.</p></details>
+</section>
+
+<section class="final">
+  <h2>Tu primera clase es gratis</h2>
+  <p>Escribinos y te reservamos un lugar hoy mismo.</p>
+  <a class="btn lime" data-wa="Hola! Quiero reservar mi clase de prueba gratis." href="#">Reservar por WhatsApp</a>
+</section>
+
+<section class="seller">
+  <h2>¿Tenés un gimnasio?</h2>
+  <p>Esta página es una demo. Te armo una igual para tu gimnasio, con tus planes y tu WhatsApp. Soy Máximo.</p>
+  <a class="btn" data-wa="Hola Máximo! Vi la demo de la página para gimnasios y quiero una para el mío." href="#">Quiero mi página</a>
+</section>
+</main>
+
+<footer>
+  <b data-nombre>Pulso Gym</b>
+  <p>Lunes a sábado de 7 a 23 hs<br>Av. Illia 1500, San Justo, Buenos Aires</p>
+  <p style="font-size:12px;opacity:.7">Sitio de demostración: nombre, precios y datos de ejemplo.</p>
+</footer>
+</div>
+
+<a class="fab" data-wa="Hola! Quiero hacer una consulta." href="#" aria-label="Escribir por WhatsApp">💬 WhatsApp</a>
+
+<script>
+var CFG={nombre:'Pulso Gym',wa:'5491126707553'}; /* país + área + número, sin + ni espacios */
+(function(){
+  var d=document, wa=function(t){return 'https://wa.me/'+CFG.wa+'?text='+encodeURIComponent(t)};
+  d.querySelectorAll('[data-nombre]').forEach(function(e){e.textContent=CFG.nombre});
+  d.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.getAttribute('data-wa'))});
+
+  /* armador de clase de prueba */
+  function val(g){return d.querySelector('[data-g="'+g+'"] .on').textContent}
+  function upd(){d.getElementById('reservar').href=wa('Hola! Quiero reservar mi clase de prueba gratis. Mi objetivo: '+val('obj').toLowerCase()+'. Quiero entrenar '+val('dias')+' días por semana.')}
+  d.querySelectorAll('.chips').forEach(function(g){g.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){g.querySelector('.on').classList.remove('on');c.classList.add('on');upd()}})});
+  upd();
+
+  /* contador de repeticiones sincronizado con la barra */
+  var rep=d.getElementById('rep'), n=1;
+  d.getElementById('lift').addEventListener('animationiteration',function(){n=n%12+1;rep.textContent=n;rep.classList.remove('bump');void rep.offsetWidth;rep.classList.add('bump')});
+
+  /* aparición al hacer scroll */
+  var sel='section h2,section .sub,.dc,.plan,.nota,.h,.voz,details,.card,.final p,.final .btn,.seller>*', seen=[];
+  d.querySelectorAll(sel).forEach(function(el){
+    var p=el.parentNode,k=seen.indexOf(p);if(k<0){seen.push(p);p._i=0}
+    el.classList.add('rv');el.style.setProperty('--d',Math.min(p._i++,5)*.08+'s');
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  }else d.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+
+  /* contadores del inicio */
+  d.querySelectorAll('[data-n]').forEach(function(el){
+    var t=+el.dataset.n,s=el.dataset.s||'',t0=null;
+    function f(x){t0=t0||x;var k=Math.min((x-t0)/1400,1);el.textContent=Math.round(t*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)}
+    setTimeout(function(){requestAnimationFrame(f)},700);
+  });
+
+  /* progreso y parallax */
+  var hero=d.querySelector('.hero'),bar=d.getElementById('bar'),tick=false;
+  function sc(){tick=false;var y=scrollY,h=d.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?y/h:0)+')';if(y<700)hero.style.setProperty('--sy',y)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(sc)}},{passive:true});sc();
+})();
+</script>
+</body>
+</html>
