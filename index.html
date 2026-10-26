@@ -115,6 +115,129 @@ footer b{color:#fff;font:900 24px var(--d);text-transform:uppercase}footer p{mar
 .js .rv{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.hero>*,.bar,.floor,.rep,.marq div,.fab::before,.btn::after{animation:none!important}.bar{transform:translateY(20px)}}
+
+/* Vidrieras Web: ajustes responsive para móvil, tablet y escritorio */
+html{overflow-x:clip}
+body{min-width:320px;overflow-x:clip}
+.app{width:100%;max-width:480px}
+img,svg,video{max-width:100%}
+p{overflow-wrap:anywhere}
+.btn{text-align:center;touch-action:manipulation}
+#bar{pointer-events:none}
+@media(min-width:600px){
+ .app{max-width:100%;padding-bottom:48px;overflow:clip}
+ header{padding:14px clamp(24px,4vw,56px)}
+ .logo{font-size:28px}
+ header .btn{min-height:44px;padding-inline:20px}
+ section{padding:58px clamp(28px,5vw,64px)}
+ h2{font-size:clamp(38px,4.5vw,54px)}
+ .hero{padding:48px clamp(28px,5vw,64px) 0}
+ .hero h1{font-size:clamp(68px,9vw,100px)}
+ .hero p{max-width:54ch;font-size:clamp(18px,2vw,21px)}
+ .ctas{flex-direction:row;flex-wrap:wrap;align-items:center}
+ .stats{max-width:520px;gap:12px}
+ .stats div{padding:16px}
+ .stats b{font-size:40px}
+ .stats small{font-size:13px}
+ .scene{height:260px;margin-inline:-10px}
+ .bar{width:min(330px,70%);left:50%;margin-left:0;transform:translateX(-50%)}
+ @keyframes lift{0%,100%{transform:translate(-50%,62px)}45%,55%{transform:translate(-50%,0)}}
+ .rep{right:8%}
+ .disc{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ .dc{min-height:130px;justify-content:center;font-size:15px}
+ .dc span{font-size:38px}
+ .planes{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px}
+ .plan{padding:26px}
+ .plan.top{transform:translateY(-6px)}
+ .card{max-width:760px;margin:0 auto;padding:28px}
+ .hs{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+ .h{grid-template-columns:1fr;align-content:start;gap:8px;min-height:120px}
+ .voz{padding:26px}
+ section:has(.voz){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px}
+ section:has(.voz)>h2,section:has(.voz)>.sub{grid-column:1/-1}
+ .final h2{font-size:clamp(46px,6vw,68px)}
+ .final .btn,.seller .btn{width:auto;min-width:260px}
+ footer{padding:34px clamp(28px,5vw,64px)}
+ .fab{right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+}
+@media(min-width:960px){
+ body{background:#E4DFFF}
+ .app{max-width:1440px;margin:0 auto;box-shadow:0 30px 100px -35px rgba(19,16,43,.32)}
+ header{padding:16px clamp(40px,6vw,88px)}
+ .logo{font-size:30px}
+ .logo i{width:42px;height:42px}
+ header .btn{min-height:46px}
+ .hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);grid-template-areas:"title scene" "copy scene" "actions scene" "stats scene";align-items:center;column-gap:clamp(28px,5vw,80px);padding:clamp(64px,7vw,100px) clamp(48px,7vw,104px) 24px;border-radius:0 0 48px 48px}
+ .hero h1{grid-area:title;font-size:clamp(84px,8.5vw,132px);margin-bottom:18px}
+ .hero p{grid-area:copy;font-size:clamp(19px,1.55vw,23px);max-width:54ch;margin-bottom:28px}
+ .hero .ctas{grid-area:actions;flex-direction:row;align-items:center;gap:14px;margin-bottom:6px}
+ .hero .ctas .btn{min-height:56px;padding-inline:24px}
+ .hero .stats{grid-area:stats;margin:24px 0 32px;max-width:560px}
+ .scene{grid-area:scene;height:410px;width:100%;margin:0;align-self:center}
+ .bar{width:min(440px,90%);top:65px}
+ @keyframes lift{0%,100%{transform:translate(-50%,74px)}45%,55%{transform:translate(-50%,0)}}
+ .floor{width:min(360px,75%);margin-left:0;left:50%;transform:translateX(-50%)}
+ @keyframes shd{0%,100%{transform:translateX(-50%) scale(1)}45%,55%{transform:translateX(-50%) scale(.7);opacity:.5}}
+ .rep{right:2%;top:14px;font-size:24px;padding:12px 18px}
+ .marq{margin-top:20px;margin-bottom:16px}
+ .marq div{font-size:30px}
+ section{padding:clamp(64px,6vw,92px) clamp(48px,7vw,104px)}
+ h2{font-size:clamp(48px,4.2vw,66px);margin-bottom:14px}
+ .sub{font-size:18px;margin-bottom:30px}
+ .disc{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+ .dc{min-height:150px;padding:22px 12px;border-radius:24px;font-size:15px}
+ .dc span{font-size:42px;margin-bottom:4px}
+ .planes{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+ .plan{padding:30px;border-radius:28px;transition:transform .25s ease,box-shadow .25s ease}
+ .plan:hover{transform:translateY(-5px);box-shadow:0 26px 54px -22px rgba(19,16,43,.32)}
+ .plan.top{transform:translateY(-10px)}
+ .plan.top:hover{transform:translateY(-15px)}
+ .plan h3{font-size:34px}
+ .plan .pr{font-size:52px}
+ .plan ul{font-size:16px;gap:9px;margin:20px 0 24px}
+ .arma{padding-top:82px;padding-bottom:82px}
+ .arma .card{max-width:900px;padding:34px}
+ .card h3{font-size:24px}
+ .chip{min-height:48px;padding-inline:20px}
+ .hs{gap:18px}
+ .h{grid-template-columns:1fr;min-height:145px;padding:22px}
+ .h b{font-size:28px}
+ .h span{font-size:16px}
+ section:has(.voz){column-gap:24px}
+ .voz{padding:30px;border-radius:24px}
+ .voz p{font-size:19px}
+ section:has(details) details{max-width:920px;margin-inline:auto}
+ .final{padding-block:88px}
+ .final p{font-size:19px}
+ .seller{padding-block:76px}
+ footer{padding:40px clamp(48px,7vw,104px)}
+ footer p{font-size:15px}
+}
+@media(max-width:420px){
+ header{padding-inline:12px;gap:10px}
+ .logo{gap:7px;font-size:21px}
+ .logo i{width:32px;height:32px;font-size:17px}
+ header .btn{min-height:40px;padding-inline:12px;font-size:13px;border-radius:13px;white-space:nowrap}
+ section{padding-inline:16px}
+ .hero{padding-inline:18px}
+ .hero h1{font-size:clamp(52px,16vw,68px)}
+ .stats{gap:7px}
+ .stats div{padding:10px 6px}
+ .stats b{font-size:30px}
+ .stats small{font-size:10px}
+ .disc{gap:8px}
+ .dc{padding:16px 4px;font-size:12px}
+ .dc span{font-size:28px}
+ .h{grid-template-columns:88px minmax(0,1fr);padding:12px;gap:10px}
+ .h b{font-size:20px}
+ .h span{font-size:13px}
+ .fab{right:12px;padding-inline:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero>*,.bar,.floor,.rep,.marq div,.fab:before,.btn:after{animation:none!important}
+ .js .rv{opacity:1;transform:none;transition:none}
+}
+
 </style>
 </head>
 <body>
